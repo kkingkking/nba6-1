@@ -1,0 +1,18 @@
+{
+  "name": "篮球训练助手",
+  "short_name": "训练助手",
+  "description": "随机播放篮球训练指令的助手应用",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#f97316",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

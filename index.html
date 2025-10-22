@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="篮球训练助手 - 随机播放训练指令">
+  <meta name="theme-color" content="#f97316">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="训练助手">
+  
+  <title>篮球训练助手</title>
+  
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="/manifest.json">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/icon.svg">
+  
+  <!-- Apple Touch Icon -->
+  <link rel="apple-touch-icon" href="/icon.svg">
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/main.tsx"></script>
+  
+  <!-- Service Worker Registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then(registration => console.log('SW registered'))
+          .catch(err => console.log('SW registration failed'));
+      });
+    }
+  </script>
+</body>
+</html>
